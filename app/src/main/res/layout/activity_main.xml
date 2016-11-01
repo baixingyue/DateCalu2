@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:background="@drawable/fiji">
+
+    <EditText
+        android:id="@+id/dateDisplay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/button1"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="date"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button2"
+        android:layout_gravity="right"
+        android:onClick="Button1Clicked"
+        android:text="Pick date 1" />
+
+    <Button
+        android:id="@+id/buttonToday1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateDisplay1"
+        android:onClick="ButtonToday1Clicked"
+        android:text="@string/SetToday1" />
+
+    <EditText
+        android:id="@+id/dateDisplay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignEnd="@+id/dateDisplay1"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/button2"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="date"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/buttonToday1"
+        android:layout_gravity="right"
+        android:onClick="Button2Clicked"
+        android:text="Pick date 2" />
+
+    <Button
+        android:id="@+id/buttonToday2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateDisplay2"
+        android:onClick="ButtonToday2Clicked"
+        android:text="@string/SetToday2" />
+
+    <Button
+        android:id="@+id/buttonGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonToday2"
+        android:layout_toStartOf="@+id/pickOK"
+        android:onClick="ButtonGoClick"
+        android:text="@string/result" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonGo"
+        android:layout_centerHorizontal="true"
+        android:text="Find your result here"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/pickOK"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="ButtonOkHit"
+        android:text="OK"
+        android:visibility="invisible" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ButtonGoClick"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+
